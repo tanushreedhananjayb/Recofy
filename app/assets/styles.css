@@ -1,0 +1,161 @@
+/* --- Google Fonts & Bootstrap Icons --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Pacifico&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css');
+
+/* --- Variables --- */
+:root {
+    --primary: #02d0e1;
+    --accent: #C0F751;
+    --dark: #0f1c2e;
+    --card-bg: #1e2f45;
+    --light: #ffffff;
+    --muted: #cccccc;
+    --shadow: 0 4px 12px rgba(2, 208, 225, 0.15);
+}
+
+/* --- Base Styling --- */
+body {
+    background-color: var(--dark);
+    font-family: 'Inter', sans-serif;
+    color: var(--light);
+}
+
+/* --- Header Title --- */
+.header-title {
+    font-family: 'Pacifico', cursive;
+    font-size: 30px;
+    color: var(--primary);
+    text-align: center;
+    margin: 15px 0 20px;
+}
+
+/* --- Recommendation Box --- */
+.recommend-box {
+    background-color: var(--card-bg);
+    border-left: 4px solid var(--primary);
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px 0;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease-in-out;
+    color: var(--light); /* 👈 FORCE WHITE TEXT */
+}
+
+.recommend-box:hover {
+    transform: translateY(-2px);
+    background-color: #24384f;
+}
+
+/* --- Home Card --- */
+.home-card {
+    background-color: var(--card-bg);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    margin-bottom: 20px;
+    color: var(--light); /* 👈 FIX WHITE TEXT */
+}
+
+.home-card ul {
+    padding-left: 0;
+}
+
+.home-card ul li {
+    color: var(--light);
+    font-size: 16px;
+    margin-bottom: 10px;
+    list-style: none;
+}
+
+/* --- Sidebar Styling --- */
+section[data-testid="stSidebar"] {
+    background-color: #16222a;
+    color: var(--light) !important;
+}
+
+section[data-testid="stSidebar"] .block-container,
+section[data-testid="stSidebar"] label,
+section[data-testid="stSidebar"] div,
+section[data-testid="stSidebar"] span,
+section[data-testid="stSidebar"] button,
+section[data-testid="stSidebar"] .stRadio > div > label,
+section[data-testid="stSidebar"] .stRadio div span {
+    color: var(--light) !important;
+    font-weight: 600;
+}
+
+/* --- Light Mode Styling --- */
+body.light-mode {
+    background-color: #f4f4f4 !important;
+    color: #000 !important;
+}
+
+body.light-mode .recommend-box {
+    background-color: #ffffff;
+    color: #000 !important;
+}
+
+body.light-mode .home-card {
+    background-color: #ffffff;
+    color: #000 !important;
+}
+
+body.light-mode section[data-testid="stSidebar"] {
+    background-color: #ffffff !important;
+    color: #000 !important;
+}
+
+body.light-mode section[data-testid="stSidebar"] label,
+body.light-mode section[data-testid="stSidebar"] .stRadio > div > label,
+body.light-mode section[data-testid="stSidebar"] .stRadio div span {
+    color: #000 !important;
+}
+
+/* --- Inputs --- */
+input[type="text"],
+input[type="number"],
+.stNumberInput input,
+.stTextInput input {
+    background-color: #e3f7ff;
+    border: 2px solid var(--primary);
+    border-radius: 8px !important;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    color: #000;
+}
+
+/* --- Buttons --- */
+.stButton > button {
+    background-color: var(--primary);
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.stButton > button:hover {
+    background-color: #00acc1;
+    transform: scale(1.02);
+}
+
+/* --- Footer --- */
+.footer {
+    font-size: 14px;
+    text-align: center;
+    color: var(--muted);
+    margin-top: 40px;
+}
+
+/* --- Responsive Fixes --- */
+@media screen and (max-width: 768px) {
+    .header-title {
+        font-size: 24px;
+    }
+
+    .home-card {
+        padding: 18px;
+    }
+}
